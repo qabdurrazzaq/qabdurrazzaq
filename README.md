@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @qabdurrazzaq
-- 👀 I’m in search of experience
-- 🌱 I’m currently learning django
-- 💞️ I’m looking to collaborate on a small scale project as for start
-- 📫 You can contact me on my mail at qureshiabdurrazzaq2002@gmail.com
+- 👀 I’m looking for better opportunities to enhance my skill set.
+- 🌱 I’m currently learning django and also a competitive programmer.
+- 💞️ I’m looking to collaborate on a small scale project as for start.
+- 📫 You can contact me on my mail at qureshiabdurrazzaq2002@gmail.com.
 
 <!---
 qabdurrazzaq/qabdurrazzaq is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
