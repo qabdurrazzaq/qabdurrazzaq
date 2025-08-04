@@ -1,0 +1,42 @@
+
+Simplified DNS Interview Guide (Detailed)
+
+1. What is DNS?
+DNS stands for Domain Name System. It is essentially the phonebook of the internet. When a user types a domain name like "google.com" into the browser, DNS is responsible for finding the corresponding IP address so the browser can connect to the correct web server. Without DNS, we would have to remember IP addresses for every website we visit.
+
+2. How DNS Lookup Works
+When you type a URL in your browser, here's what happens:
+  1. The browser checks its own cache to see if it already knows the IP address.
+  2. If not, it asks the operating system.
+  3. If the OS doesn't have it cached, it contacts a DNS resolver (usually from your ISP).
+  4. The resolver queries the DNS hierarchy: first the Root DNS, then the Top-Level Domain (TLD) server (like .com), and finally the authoritative DNS server for that domain.
+  5. Once it gets the IP, it returns it to the browser to establish a connection.
+
+3. Common DNS Record Types
+- A Record: Maps a domain to an IPv4 address (e.g., 192.168.1.1).
+- AAAA Record: Maps a domain to an IPv6 address.
+- CNAME Record: Alias for another domain. For example, www.example.com -> example.com.
+- MX Record: Specifies the mail servers responsible for email delivery.
+- NS Record: Defines which servers are authoritative for the domain.
+- TXT Record: Used to store arbitrary text like SPF, DKIM, and verification tokens.
+
+4. Recursive vs Iterative Queries
+- Recursive Query: The DNS resolver takes full responsibility to find the final IP address and return it to the client.
+- Iterative Query: Each DNS server in the path returns the best answer it can (either the IP or a referral to another DNS server). The client continues the process.
+
+5. DNS Caching and TTL
+DNS responses are cached at various levels—browser, OS, and resolver—to speed up repeat visits. TTL (Time To Live) is a value that tells how long a DNS record should be stored in cache. Lower TTL results in quicker updates, while higher TTL improves performance.
+
+6. DNS Security Concepts
+- DNS Spoofing (Poisoning): Attackers provide false DNS data to redirect users to malicious sites.
+- DNS over HTTPS (DoH) and DNS over TLS (DoT): These protocols encrypt DNS queries to enhance privacy and prevent interception.
+- DNSSEC: A security extension that uses cryptographic signatures to verify the authenticity of DNS responses.
+
+7. Tools and Troubleshooting
+- Tools: You can use nslookup, dig, ping, or host to check DNS records and troubleshoot issues.
+- Common Fixes: Clear your DNS cache, switch to public DNS (like Google’s 8.8.8.8), or verify your domain configuration.
+
+8. Load Balancing using DNS
+Round-robin DNS is a basic load balancing technique where multiple IP addresses are associated with a single domain. Each DNS response returns a different IP in rotation, helping distribute traffic across multiple servers.
+
+This guide is intended to help you answer common DNS-related questions in interviews with both clarity and confidence.
